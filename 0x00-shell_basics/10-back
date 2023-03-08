@@ -1,2 +1,2 @@
-#!/bin/basoh
-cd -
+#!/bin/bash
+cd ..
