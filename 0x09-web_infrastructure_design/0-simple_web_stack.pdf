@@ -1,0 +1,13 @@
+Web Infrastructure Design
+Definitions and Explanations
+Server Definition: A server refers to a physical device, a virtual instance, or a computer program that offers various functionalities to other devices or programs known as "clients."
+Role of Domain Name: A domain name serves the purpose of identifying specific resources on the Internet, which could be computers, networks, or services. It utilizes a text-based label that is more user-friendly for memorization than the numerical IP addresses.
+DNS Record for www.foobar.com: The DNS record for "www" in "www.foobar.com" is categorized as a 'cname' record.
+Web Server's Role: The primary role of a Web Server involves storing, processing, and presenting the content of a website, including its codebase. It facilitates the delivery of web pages to users, predominantly composed of HTML and CSS, through the HTTP protocol.
+Role of Application Server: The application server is responsible for generating dynamic content by executing server-side scripts such as JSP, Ajax, and PHP, enabling enhanced user experiences and interactivity.
+Database's Role: A database is tasked with the systematic and efficient management of data. It ensures organized storage, accessibility, updates, and deletion of data, promoting effective data management practices.
+Server-User Computer Communication: The server communicates with the user's computer using the HTTP (Hypertext Transfer Protocol) protocol.
+Issues
+A. Single Point of Failure (SPOF): Numerous single points of failure exist, beginning with the scenario where a single server houses the entire web server, application server, and database. A single point of failure refers to a component within a system that, if it malfunctions, can lead to the complete cessation of the entire system's functionality.
+B. Downtime During Maintenance: Downtime occurs when maintenance is required, such as deploying new code that necessitates restarting the web server. This downtime might extend beyond expectations because the server relies on a single codebase that could be temporarily unavailable. As a consequence, users are unable to access the website and its content, resulting in an unfavourable user experience and a loss of traffic.
+C. Scalability Challenges with High Traffic: The absence of a load balancer in the domain configuration prevents effective scaling in response to high incoming traffic. This lack of load balancing capability poses challenges in managing increased user loads. Consequently, user experience might degrade, and the website's capacity to accommodate users becomes restricted.

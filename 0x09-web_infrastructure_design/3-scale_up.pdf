@@ -1,0 +1,15 @@
+Web Infrastructure Design:
+
+Definitions and Explanations
+
+Strategic Additions and their Purpose: With a forward-looking perspective, we've introduced two pivotal elements: an additional server and a supplementary load balancer. This strategic expansion is driven by a series of nuanced reasons that magnify the potency of our web infrastructure:
+
+Enhanced Component Segregation: The inclusion of an extra server has unveiled a powerful capability – the segregation of individual components. Our web architecture now allocates distinct servers for the web server (Nginx), application server (code base), and database (MySQL). This separation fortifies security, boosts efficiency, and mitigates potential conflicts.
+
+Fortified Redundancy: The additional server also shines as a robust contingency measure. It assumes the role of a comprehensive backup, armed to leap into action should any of the components or servers encounter a setback. This resilient redundancy is our guarantee of uninterrupted service even in the face of unexpected failures.
+
+Vigilant Monitoring and Shielding: Every server in this expanded infrastructure is under vigilant surveillance. The implementation of continuous monitoring ensures that any aberrations or anomalies are detected promptly, enabling swift responses. Moreover, the fortification of each server with dedicated firewalls provides an impregnable layer of defense against potential threats.
+
+Reinforced Load Distribution: Our arsenal now boasts an extra load balancer, a weapon of choice for managing burgeoning traffic. This load balancer's adeptness lies in its ability to judiciously distribute incoming traffic across the expanse of our infrastructure. This equips us to handle increasing demand with finesse, eliminating bottlenecks and enhancing user experiences.
+
+These additions are not mere appendages but strategic enablers that amplify the robustness, scalability, and security of our web infrastructure. The convergence of cutting-edge technology, vigilant monitoring, and shrewd redundancy catapults us into a sphere of enhanced reliability and performance.

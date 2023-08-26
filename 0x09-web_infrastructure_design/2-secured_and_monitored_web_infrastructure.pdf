@@ -1,0 +1,26 @@
+Web Infrastructure Design
+
+ Definitions and Explanations
+
+Inclusion of Additional Elements: We have introduced three new components to enhance our web infrastructure. These additions serve specific purposes:
+
+Firewalls: Each server now has its own firewall. This is a security measure designed to safeguard the servers from potential attacks and exploitation. The firewalls monitor and control network traffic according to predefined security rules, effectively creating a protective barrier between trusted and untrusted networks.
+SSL Certificate: An SSL certificate has been implemented for the server at www.foobar.com, ensuring that data transmission occurs over HTTPS. Unlike the previous method of passing data over plain-text HTTP, HTTPS uses Transfer Layer Security (TLS) to encrypt the data, enhancing security.
+Monitoring Clients: Three monitoring clients have been introduced. These clients are responsible for gathering logs and transmitting them to Sumo Logic, our data collection tool.
+Firewalls and Their Purpose: Firewalls are integral to network security. They function as network security systems that oversee incoming and outgoing network traffic. Operating according to predefined security rules, firewalls establish a protective boundary between trusted and untrusted networks. This separation helps prevent unauthorized access and potential threats.
+
+Usage of HTTPS: The shift to serving traffic over HTTPS is crucial due to the limitations of HTTP. In contrast to HTTP, which transmits data in plain text, HTTPS employs TLS encryption to secure data transfer. This encryption ensures that data exchanged between users and the web server remains confidential and inaccessible to malicious entities.
+
+Role of Monitoring: Monitoring is a proactive approach to identify and address web application performance issues. By constantly observing the system, monitoring tools enable the timely detection and diagnosis of potential problems, preventing disruptions to user experience.
+
+Data Collection by Monitoring Tools: The monitoring tool collects data by capturing logs from various components: the application server, MySQL Database, and Nginx web server. In computing, logs are automatically generated and timestamped records of relevant system events, aiding in troubleshooting and analysis.
+
+Monitoring Web Server QPS: To monitor the Query Per Second (QPS) load on a web server handling 1,000 queries per second, a multi-faceted approach is adopted. This involves monitoring from both network and application perspectives, ensuring that the server's performance remains optimal.
+
+Issues:
+
+A. Terminating SSL at Load Balancer Level: Terminating SSL at the load balancer introduces resource and CPU-intensive decryption. Offloading this task to the load balancer alleviates processing strain on the application server. However, there may be potential concerns with this approach, which will be updated in this explanation.
+
+B. Single MySQL Server for Writes: Relying on a single MySQL server for write operations can lead to downtime issues. If this server becomes unavailable, the application loses the ability to add or update data, affecting certain features. Implementing redundancy or failover mechanisms is important to mitigate such risks.
+
+C. Uniform Server Components as a Challenge: Equipping all servers with identical components (database, web server, application server) creates a challenge. If a bug or issue arises in one component on one server, it propagates to others with the same setup. This emphasizes the importance of robust testing and the potential benefits of component diversification to enhance fault tolerance.
