@@ -4,7 +4,7 @@ This project contains tasks for learning about writing a postmortem.
 
 ## Tasks To Complete
 
-+ [x] 0. My first postmortem<br/>_**[Blog_Post.md](Blog_Post.md)**_ contains a blog post that meets the following requirements:
++ [x] 0. My first postmortem<br/>_**[Blog_Post.md](blog_Post.md)**_ contains a blog post that meets the following requirements:
   + **INFO:**
     + Using one of the web stack debugging project issue or an outage you have personally face, write a postmortem. Most of you will never have faced an outage, so just get creative and invent your own :)
     + While postmortem format can vary, stick to this one so that you can get properly reviewed by your peers.
